@@ -1,0 +1,79 @@
+{
+  "action": {
+    "bind": {
+      "model": "host",
+      "option": {
+        "withs": {}
+      }
+    },
+    "after:find": "scripts.demo.AfterFind"
+  },
+  "layout": {
+    "actions": [
+      {
+        "title": "返回",
+        "divideLine": true,
+        "showWhenAdd": true,
+        "showWhenView": true,
+        "icon": "icon-arrow-left",
+        "action": [
+          {
+            "name": "closeModal",
+            "type": "Common.closeModal",
+            "payload": {}
+          }
+        ]
+      }
+    ],
+    "form": {
+      "sections": [
+        {
+          "columns": [
+            {
+              "width": 24,
+              "name": "日志明细"
+            }
+          ]
+        }
+      ],
+      "props": {}
+    },
+
+    "primary": "id",
+    "operation": {
+      "preset": {
+        "save": {
+          "back": true
+        },
+        "back": {}
+      }
+    }
+  },
+  "fields": {
+    "form": {
+      "日志明细": {
+        "bind": "host",
+        "view": {
+          "type": "Text",
+          "props": {}
+        },
+        "edit": {
+          "props": { "rows": 20 },
+          "type": "TextArea"
+        }
+      },
+      "创建时间": {
+        "bind": "created_at",
+        "view": {
+          "type": "Text",
+          "props": { "format": "YYYY-MM-DD" }
+        },
+        "edit": {
+          "props": { "disabled": true },
+          "type": "Input"
+        }
+      }
+    }
+  },
+  "name": "日志明细"
+}

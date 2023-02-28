@@ -1,0 +1,46 @@
+{
+  "name": "APP Menu",
+  "nodes": [],
+  "output": {
+    "setting": [],
+    "items": [
+      {
+        "blocks": 0,
+        "icon": "icon-book",
+        "id": 700,
+        "name": "域名配置",
+        "parent": null,
+        "path": "/x/Table/host",
+        "visible_menu": 1,
+        "badge": 0
+      },
+      {
+        "blocks": 0,
+        "icon": "icon-file-text",
+        "id": 700,
+        "name": "日志查询",
+        "parent": null,
+        "path": "/x/Table/log",
+        "visible_menu": 1,
+        "badge": 0
+      },
+      {
+        "blocks": 0,
+        "icon": "icon-eye",
+        "id": 700,
+        "name": "秘钥配置",
+        "parent": null,
+        "path": "/x/Table/secret",
+        "visible_menu": 1,
+        "badge": 0
+      },
+      {
+        "icon": "icon-activity",
+        "id": 1200,
+        "name": "图表",
+        "parent": null,
+        "path": "/x/Chart/dashboard"
+      }
+    ]
+  }
+}

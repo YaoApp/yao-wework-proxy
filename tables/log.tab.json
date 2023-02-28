@@ -1,0 +1,83 @@
+{
+  "name": "日志查询",
+  "action": {
+    "bind": {
+      "model": "log",
+      "option": {
+        "withs": {}
+      }
+    },
+    "search": {
+      "default": [
+        { "orders": [{ "column": "id", "option": "desc" }] },
+        null,
+        10
+      ]
+    }
+  },
+  "layout": {
+    "primary": "id",
+    "header": {
+      "preset": {},
+      "actions": []
+    },
+    "filter": {
+      "columns": [],
+      "actions": []
+    },
+    "table": {
+      "columns": [
+        {
+          "width": 250,
+          "name": "日志名称"
+        },
+
+        {
+          "name": "创建时间",
+          "width": 250
+        }
+      ],
+      "operation": {
+        "fold": false,
+        "actions": [
+          {
+            "title": "编辑",
+            "icon": "icon-edit-2",
+            "action": {
+              "Common.openModal": {
+                "Form": {
+                  "type": "edit",
+                  "model": "log"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "fields": {
+    "filter": {},
+    "table": {
+      "日志名称": {
+        "bind": "field_name",
+        "view": {
+          "type": "Text",
+          "props": {}
+        },
+        "edit": {
+          "type": "Input",
+          "props": {}
+        }
+      },
+
+      "创建时间": {
+        "bind": "created_at",
+        "view": {
+          "type": "Text",
+          "props": { "format": "YYYY-MM-DD" }
+        }
+      }
+    }
+  }
+}

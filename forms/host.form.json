@@ -1,0 +1,113 @@
+{
+  "action": {
+    "bind": {
+      "model": "host",
+      "option": {
+        "withs": {}
+      }
+    }
+  },
+  "layout": {
+    "actions": [
+      {
+        "title": "保存",
+
+        "showWhenAdd": true,
+        "showWhenView": true,
+        "style": "primary",
+        "action": [
+          {
+            "name": "Submit",
+            "type": "Form.submit",
+            "payload": {}
+          },
+          {
+            "name": "Back",
+            "type": "Common.closeModal",
+            "payload": {}
+          }
+        ]
+      },
+
+      {
+        "title": "返回",
+        "divideLine": true,
+        "showWhenAdd": true,
+        "showWhenView": true,
+        "icon": "icon-arrow-left",
+        "action": [
+          {
+            "name": "closeModal",
+            "type": "Common.closeModal",
+            "payload": {}
+          }
+        ]
+      }
+    ],
+    "form": {
+      "sections": [
+        {
+          "columns": [
+            {
+              "width": 24,
+              "name": "请求域名"
+            },
+            {
+              "width": 24,
+              "name": "路径"
+            }
+          ]
+        }
+      ],
+      "props": {}
+    },
+
+    "primary": "id",
+    "operation": {
+      "preset": {
+        "save": {
+          "back": true
+        },
+        "back": {}
+      }
+    }
+  },
+  "fields": {
+    "form": {
+      "请求域名": {
+        "bind": "host",
+        "view": {
+          "type": "Text",
+          "props": {}
+        },
+        "edit": {
+          "type": "Input",
+          "props": {}
+        }
+      },
+      "路径": {
+        "bind": "path",
+        "view": {
+          "type": "Text",
+          "props": {}
+        },
+        "edit": {
+          "type": "Input",
+          "props": {}
+        }
+      },
+      "请求方法": {
+        "bind": "method",
+        "view": {
+          "type": "Text",
+          "props": {}
+        },
+        "edit": {
+          "type": "Input",
+          "props": {}
+        }
+      }
+    }
+  },
+  "name": "客户标签"
+}

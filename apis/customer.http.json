@@ -1,0 +1,32 @@
+{
+  "name": "客户接收消息回调域名",
+  "version": "1.0.2",
+  "description": "customer",
+  "group": "customer",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "/event",
+      "method": "GET",
+      "guard": "-",
+      "process": "scripts.customer.Verify",
+      "in": [":payload", ":body"],
+      "out": {
+        "status": 200,
+        "type": "text/plain"
+      }
+    },
+    {
+      "commont": "验证路由的时候使用这个路由把event2改成event",
+      "path": "/event2",
+      "method": "GET",
+      "guard": "-",
+      "process": "scripts.customer.Verify",
+      "in": [":body"],
+      "out": {
+        "status": 200,
+        "type": "text/plain"
+      }
+    }
+  ]
+}

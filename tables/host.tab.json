@@ -1,0 +1,139 @@
+{
+  "name": "域名配置",
+  "action": {
+    "bind": {
+      "model": "host",
+      "option": {
+        "withs": {}
+      }
+    },
+    "search": {
+      "default": [
+        { "orders": [{ "column": "id", "option": "desc" }] },
+        null,
+        10
+      ]
+    }
+  },
+  "layout": {
+    "primary": "id",
+    "header": {
+      "preset": {},
+      "actions": []
+    },
+    "filter": {
+      "columns": [
+        {
+          "name": "域名",
+          "width": 4
+        }
+      ],
+      "actions": [
+        {
+          "icon": "icon-plus",
+          "width": 3,
+          "action": {
+            "Common.openModal": {
+              "width": 1200,
+              "Form": {
+                "type": "edit",
+                "model": "host"
+              }
+            }
+          },
+          "title": "添加域名"
+        }
+      ]
+    },
+    "table": {
+      "columns": [
+        {
+          "width": 250,
+          "name": "域名"
+        },
+        {
+          "width": 250,
+          "name": "请求路径"
+        },
+
+        {
+          "name": "创建时间",
+          "width": 250
+        }
+      ],
+      "operation": {
+        "fold": false,
+        "actions": [
+          {
+            "title": "编辑",
+            "icon": "icon-edit-2",
+            "action": {
+              "Common.openModal": {
+                "Form": {
+                  "type": "edit",
+                  "model": "host"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "fields": {
+    "filter": {
+      "域名": {
+        "bind": "where.host.match",
+        "edit": {
+          "type": "Input",
+          "compute": "Trim",
+          "props": {
+            "placeholder": "域名"
+          }
+        }
+      }
+    },
+    "table": {
+      "域名": {
+        "bind": "host",
+        "view": {
+          "type": "Text",
+          "props": {}
+        },
+        "edit": {
+          "type": "Input",
+          "props": {}
+        }
+      },
+      "请求路径": {
+        "bind": "path",
+        "view": {
+          "type": "Text",
+          "props": {}
+        },
+        "edit": {
+          "type": "Input",
+          "props": {}
+        }
+      },
+      "请求方法": {
+        "bind": "method",
+        "view": {
+          "type": "Text",
+          "props": {}
+        },
+        "edit": {
+          "type": "Input",
+          "props": {}
+        }
+      },
+      "创建时间": {
+        "bind": "created_at",
+        "view": {
+          "type": "Text",
+          "props": { "format": "YYYY-MM-DD" }
+        }
+      }
+    }
+  }
+}

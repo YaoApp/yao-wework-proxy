@@ -1,0 +1,16 @@
+{
+  "name": "转发消息",
+  "worker_nums": 10,
+  "attempts": 3,
+  "attempt_after": 200,
+  "timeout": 2,
+  "size": 1000,
+  "process": "scripts.tasks.Send",
+  "event": {
+    "next": "scripts.tasks.NextID",
+    "add": "scripts.tasks.OnAdd",
+    "success": "scripts.tasks.OnSuccess",
+    "error": "scripts.tasks.OnError",
+    "progress": "scripts.tasks.OnProgress"
+  }
+}
