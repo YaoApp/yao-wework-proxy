@@ -31,6 +31,10 @@
           "columns": [
             {
               "width": 24,
+              "name": "创建时间"
+            },
+            {
+              "width": 24,
               "name": "日志明细"
             }
           ]
@@ -52,7 +56,7 @@
   "fields": {
     "form": {
       "日志明细": {
-        "bind": "host",
+        "bind": "value_json",
         "view": {
           "type": "Text",
           "props": {}
