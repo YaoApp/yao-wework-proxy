@@ -41,4 +41,4 @@ jobs:
           port: 22
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
-          script: rm -rf /data/wework-proxy && mkdir -p /data/wework-proxy/logs && cd /data/wework-proxy && tar xvfz /home/ubuntu/dist-wework-proxy.tar.gz && sudo supervisorctl reload
+          script: sudo rm -rf /data/wework-proxy && mkdir -p /data/wework-proxy/logs && cd /data/wework-proxy && tar xvfz /home/ubuntu/dist-wework-proxy.tar.gz && sudo supervisorctl reload
