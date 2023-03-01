@@ -16,8 +16,9 @@ function Verify(data, query) {
     field_name: "打印quer日志",
     value_json: query,
   });
+  console.log([data, query]);
 
-  var config = Proces("models.secret.get", {});
+  var config = Process("models.secret.get", {});
   if (!config || !config.length) {
     return {
       code: 200,

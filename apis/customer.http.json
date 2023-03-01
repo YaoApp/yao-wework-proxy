@@ -7,7 +7,7 @@
   "paths": [
     {
       "path": "/event",
-      "method": "GET",
+      "method": "POST",
       "guard": "-",
       "process": "scripts.customer.Verify",
       "in": [":payload", ":body"],
@@ -22,7 +22,7 @@
       "method": "GET",
       "guard": "-",
       "process": "scripts.customer.Verify",
-      "in": [":body"],
+      "in": [":query"],
       "out": {
         "status": 200,
         "type": "text/plain"
