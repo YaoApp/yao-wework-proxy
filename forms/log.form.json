@@ -1,7 +1,7 @@
 {
   "action": {
     "bind": {
-      "model": "host",
+      "model": "log",
       "option": {
         "withs": {}
       }
