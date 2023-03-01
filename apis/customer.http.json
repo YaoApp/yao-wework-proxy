@@ -6,7 +6,7 @@
   "guard": "-",
   "paths": [
     {
-      "path": "/event2",
+      "path": "/event",
       "method": "POST",
       "guard": "-",
       "process": "scripts.customer.Verify",
@@ -18,7 +18,7 @@
     },
     {
       "commont": "验证路由的时候使用这个路由把event2改成event",
-      "path": "/event",
+      "path": "/event2",
       "method": "GET",
       "guard": "-",
       "process": "scripts.customer.Verify",
