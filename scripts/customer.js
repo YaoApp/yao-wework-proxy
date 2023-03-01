@@ -8,11 +8,11 @@
  */
 
 function Verify(data, query) {
-  Process("models.wechat.save", {
+  Process("models.log.save", {
     field_name: "打印data日志",
     value_json: data,
   });
-  Process("models.wechat.save", {
+  Process("models.log.save", {
     field_name: "打印quer日志",
     value_json: query,
   });
@@ -42,7 +42,7 @@ function Verify(data, query) {
 
   if (res.data && res.data.xml) {
     var event = res.data.xml.MsgType;
-    Process("models.wechat.save", {
+    Process("models.log.save", {
       field_name: event,
       value_json: res,
     });

@@ -15,6 +15,10 @@ function Data() {
 }
 
 function AfterFind(payload) {
-  payload.value_json = JSON.stringify(payload.value_json);
-  return payload;
+  if (payload.value_json instanceof String) {
+    return payload;
+  } else {
+    payload.value_json = JSON.stringify(payload.value_json);
+    return payload;
+  }
 }
