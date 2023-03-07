@@ -23,6 +23,27 @@
             "payload": {}
           }
         ]
+      },
+      {
+        "title": "重新发送",
+        "icon": "icon-feather",
+        "showWhenAdd": true,
+        "style": "primary",
+        "action": [
+          {
+            "name": "audit",
+            "type": "Service.log",
+            "payload": {
+              "method": "Send",
+              "args": ["{{id}}"]
+            }
+          },
+          {
+            "name": "Back",
+            "type": "Common.closeModal",
+            "payload": {}
+          }
+        ]
       }
     ],
     "form": {
